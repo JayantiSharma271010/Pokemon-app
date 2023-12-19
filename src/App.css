@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Ubuntu:wght@300&display=swap");
+
+.container {
+  max-width: 80vw;
+  width: 100%;
+  margin: auto auto 3rem;
+  background: #fff;
+  padding: 0rem 1.5rem 2rem;
+}
+
+.heading {
+  font-size: 5rem;
+  text-align: center;
+  width: 40%;
+  margin-bottom: 1rem;
+  margin: auto;
+  height: 245px;
+  img {
+    width: 100%;
+  }
+}
+
+.card {
+  max-width: 20rem;
+  max-height: 20rem;
+  margin: 2.5rem;
+  height: 100%;
+  border-radius: 5%;
+  cursor: pointer;
+  background: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.img-container {
+  height: 70%;
+  background: #f2f2f2;
+  width: 100%;
+  max-width: 20rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 70%;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+
+  .name {
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+    color: black;
+    font-weight: 700;
+  }
+}
+
+.info {
+  width: 7rem;
+  height: 1.3rem;
+  font-size: 0.86rem;
+  text-align: center;
+  border-radius: 5%;
+  text-transform: capitalize;
+  color: white;
+}
+
+.index-number {
+  color: #7e7e7e;
+  font-size: 0.9rem;
+}
+
+form {
+  text-align: center;
+
+  input {
+    padding: 1rem 3rem;
+    height: 0.3rem;
+    background-color: white;
+    border: 1px solid #cccccc;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold !important;
+    font-family: "Ubuntu";
+    outline: 0;
+    color: #333333;
+    word-spacing: 0.7px;
+    &:focus {
+      outline: 1px solid #65c3f8;
+    }
+  }
+}
+
+.type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* Pokemon type Colors */
+.fire {
+  background: #fd7d24;
+}
+
+.dark {
+  background: #707070;
+}
+
+.dragon {
+  background: linear-gradient(to bottom, #53a4cf, #f16e57);
+}
+.bug {
+  background: #729f3f;
+}
+
+.flying {
+  background: linear-gradient(to bottom, #3dc7ef, #bdb9b8);
+  color: black;
+}
+
+.grass {
+  background: #9bcc50;
+}
+
+.poison {
+  background: #b97fc9;
+}
+
+.water {
+  background: #4592c4;
+}
+
+.normal {
+  background: #a4acaf;
+  color: black;
+}
+
+.electric {
+  background: #eed535;
+  color: black;
+}
+
+.ground {
+  background: linear-gradient(to bottom, #f7de3f, #ab9842);
+  color: black;
+}
+
+.fairy {
+  background: #fdb9e9;
+  color: black;
+}
+
+.fighting {
+  background: #d56723;
+}
+
+.ghost {
+  background: #664497;
+}
+
+.ice {
+  background: #51c4e7;
+}
+
+.psychic {
+  background: #f366b9;
+}
+
+.rock {
+  background: #a38c21;
+}
+
+.steel {
+  background: #9eb7b8;
+}
+/* type colors ending */
+
+.loadMore-btn {
+  text-align: center;
+  margin-bottom: 2rem;
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+}
+@media (width <=1025px) {
+  .container {
+    max-width: 85vw;
+  }
+
+  .heading{
+    width: 60%;
+    height: 245px;
+  }
+  .card {
+    max-width: 13rem;
+    max-height: 13rem;
+    margin: 3rem 1.5rem;
+    .img-container {
+      padding: 0.5rem;
+    }
+  }
+
+  form{
+    input{
+      padding: 0.8rem 2rem;
+    }
+  }
+  .content{
+    .name{
+      font-size: 1rem;
+      width: 100%;
+      text-align: center;
+      margin: .2rem 0 .6rem;
+    }
+  }
+}
+
+
+@media (width <= 769px){
+  .card{
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+  .heading{
+    height: 200px;
+  }
+}
+@media (width <= 426px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .container {
+    max-width: 100vw;
+  }
+
+  .heading {
+    width: 85%;
+    height: 190px;
+  }
+
+  .card {
+    max-width: 9rem;
+    height: 9rem;
+    .img-container {
+      img {
+        width: 50%;
+      }
+    }
+
+    .content {
+      .name {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        margin: 0.1rem 0 0.3rem;
+      }
+    }
+  }
+}
+
+@media (width <= 321px) {
+  .card {
+    max-width: 7rem;
+    max-height: 7rem;
+  }
+}
