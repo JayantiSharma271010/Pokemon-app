@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React,{ useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 import { usePokemonContext } from "./Components/PokemonContext";
@@ -27,8 +27,8 @@ function App() {
           <ul className="grid">
             {filteredPokemon.map((pokemon, id) => (
               <>
-                <Link to={`/pokemon/${pokemon.id}`}>
-                  <div className={`card`} key={pokemon.id}>
+                <Link to={`/pokemon/${pokemon.id}`} key={id}>
+                  <div className={`card`} key={id}>
                     <div className="img-container">
                       <img src={pokemon.image} alt="" />
                     </div>
@@ -36,8 +36,8 @@ function App() {
                       <p className="index-number">#{pokemon.id}</p>
                       <p className="name">{pokemon.name.toUpperCase()}</p>
                       <div className="type">
-                        {pokemon.typed.map((item) => (
-                          <p className={`info ${item}`}>{item}</p>
+                        {pokemon.typed.map((item, id) => (
+                          <p className={`info ${item}`} key={id}>{item}</p>
                         ))}
                       </div>
                     </div>
